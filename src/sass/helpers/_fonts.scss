@@ -1,0 +1,30 @@
+:root {
+    --nav: 20px;
+    --title: 64px;
+    --sub-title: 40px;
+    --des: 18px;
+    --btn: 16px;
+    --card-title: 18px;
+    --card-des: 16px;
+    --section-title: 30px;
+    --footer: 20px;
+
+    --form-title: 30px;
+    --form-label: 18px;
+    --form-input: 16px;
+}
+
+@media (width > 600px){
+    :root {
+        --section-title: 50px;
+    }
+}
+
+@media (width > 992px){
+    :root {
+        --title: 67px;
+        --section-title: 67px;
+        --btn: 18px;
+        --nav: 18px;
+    }
+}

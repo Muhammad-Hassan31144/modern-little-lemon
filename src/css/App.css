@@ -1,0 +1,322 @@
+:root {
+  --nav: 20px;
+  --title: 64px;
+  --sub-title: 40px;
+  --des: 18px;
+  --btn: 16px;
+  --card-title: 18px;
+  --card-des: 16px;
+  --section-title: 30px;
+  --footer: 20px;
+  --form-title: 30px;
+  --form-label: 18px;
+  --form-input: 16px;
+}
+
+@media (width > 600px) {
+  :root {
+    --section-title: 50px;
+  }
+}
+@media (width > 992px) {
+  :root {
+    --title: 67px;
+    --section-title: 67px;
+    --btn: 18px;
+    --nav: 18px;
+  }
+}
+:root {
+  --container-padding-x: 1rem;
+}
+
+@media (width > 724px) {
+  :root {
+    --container-padding-x: 5.12rem;
+  }
+}
+@media (width > 1290px) {
+  :root {
+    --container-padding-x: 16rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  background-color: #F4CE14;
+  border-radius: 20px;
+  color: black;
+  padding: 0.5rem 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .container img {
+  width: 147px;
+  height: 70px;
+}
+header .container .hamburger-icon {
+  margin-left: var(--container-padding-x);
+  position: absolute;
+  left: 0;
+}
+header .container nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: beige;
+  height: 100vh;
+  width: 75vw;
+  display: none;
+}
+header .container nav ul {
+  list-style-type: none;
+  gap: 1.75rem;
+  padding: 0;
+}
+header .container nav ul li {
+  font-size: var(--nav);
+  padding: 21px 16px;
+  border-bottom: solid 1px #d9d9d9;
+  font-weight: bold;
+}
+header .container .beside-nav {
+  width: 25vw;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(37, 37, 37, 0.7215686275);
+  display: none;
+}
+header .container nav,
+header .container .beside-nav {
+  z-index: 1;
+}
+
+footer {
+  background-color: #D9D9D9;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.44rem;
+  padding-bottom: 2.44rem;
+  gap: 4rem;
+}
+footer img {
+  width: 162px;
+  height: 286px;
+  order: 1;
+}
+footer .texts-and-links {
+  display: grid;
+  align-items: start;
+  gap: 30px;
+}
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 7px;
+  font-size: var(--footer);
+}
+footer ul {
+  list-style-type: none;
+  font-size: var(--nav);
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.food-grid {
+  display: grid;
+}
+.food-grid .food-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9375rem;
+  border-top: solid 2px #edefee;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.food-grid .food-card .texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  gap: 0.5rem;
+}
+.food-grid .food-card .texts .title-and-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset;
+}
+.food-grid .food-card .texts .title-and-price h1 {
+  font-size: var(--card-title);
+  font-weight: bold;
+}
+.food-grid .food-card .texts .title-and-price .price {
+  color: #EE9972;
+  margin-right: 1rem;
+}
+.food-grid .food-card .texts .des {
+  font-size: var(--card-des);
+  color: #495E57;
+}
+.food-grid .food-card .texts .btns {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: unset;
+}
+.food-grid .food-card .texts .btns .order-btn {
+  background-color: #F4CE14;
+}
+.food-grid .food-card .texts .btns .add-btn {
+  background-color: #c6c6c6;
+  margin-right: 1rem;
+}
+.food-grid .food-card img {
+  width: 83px;
+  height: 83px;
+}
+
+/* Media Queries */
+@media (width > 600px) {
+  .food-grid {
+    grid-template-columns: auto auto;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .food-grid .food-card {
+    flex-direction: column;
+    background-color: #edefee;
+    align-items: unset;
+    gap: unset;
+    border-top: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    width: 264.67px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .food-grid .food-card .texts {
+    order: 2;
+    padding: 1.2rem 1rem;
+  }
+  .food-grid .food-card .texts .des:not(.price) {
+    font-weight: normal;
+    color: #495e57;
+  }
+  .food-grid .food-card .texts .price,
+  .food-grid .food-card .texts .add-btn {
+    margin-right: unset !important;
+  }
+  .food-grid .food-card img {
+    order: 1;
+    width: 264.67px;
+    height: 185.26px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: solid 1.5px;
+  }
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  footer .container {
+    flex-direction: row;
+    padding: var(--container-padding-x);
+  }
+  footer .container img {
+    order: 0;
+  }
+  footer .container .texts-and-links {
+    grid-template-columns: auto auto;
+  }
+  .container {
+    width: 100%;
+    padding-right: var(--container-padding-x);
+    padding-left: var(--container-padding-x);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (width > 900px) {
+  .container {
+    width: 100%;
+    padding-right: var(--container-padding-x);
+    padding-left: var(--container-padding-x);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (width > 992px) {
+  header .container {
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+  }
+  header .container img {
+    width: 202px;
+  }
+  header .container nav {
+    position: unset;
+    display: block;
+    width: unset;
+    height: unset;
+  }
+  header .container nav ul {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 0;
+    align-items: center;
+    height: 100%;
+  }
+  header .container nav ul li {
+    border: none;
+    padding: 0;
+  }
+  .food-grid {
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    gap: unset;
+  }
+  footer .container {
+    padding-top: 2.44rem;
+    padding-bottom: 2.44rem;
+    gap: unset;
+  }
+  footer .container .texts-and-links {
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    align-items: unset;
+  }
+  footer .container .texts-and-links h5 {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=App.css.map */
